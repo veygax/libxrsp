@@ -16,6 +16,6 @@ include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
 CPMAddPackage("gh:libusb/libusb-cmake#v1.0.29-0")
 CPMAddPackage("gh:fmtlib/fmt#12.0.0")
 
-add_library(libxrsp src/xrsp.cc src/xrsp.h)
+add_library(xrsp SHARED src/xrsp.cc src/xrsp.h)
 
-target_link_libraries(libxrsp PRIVATE usb-1.0 fmt::fmt)
+target_link_libraries(xrsp PRIVATE usb-1.0 fmt::fmt)
